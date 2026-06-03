@@ -1,3 +1,9 @@
 .DS_Store
 Thumbs.db
 *.swp
+
+# Local sample sheet-music library — not for publishing
+site/PDF Parts/
+
+# Agent memory / scratch
+memory/

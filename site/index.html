@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Standly - Digital Music Stand for Windows Tablets</title>
-    <meta name="description" content="A digital music stand for Windows tablets. View sheet music, annotate with pen and touch, build setlists, and turn pages hands-free with Bluetooth remotes.">
+    <title>Standly - Digital Music Stand for Windows</title>
+    <meta name="description" content="A digital music stand for Windows PCs, laptops, tablets, and 2-in-1s. View sheet music, annotate with pen and touch, build setlists, and turn pages hands-free with Bluetooth remotes.">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -50,7 +50,7 @@
             Your sheet music,<br>always ready.
         </h1>
         <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            A digital music stand built for Windows tablets. View PDFs, annotate with pen and touch, build setlists, and turn pages hands-free.
+            A digital music stand built for Windows &mdash; PCs, laptops, tablets, and 2-in-1s. View PDFs, annotate with pen and touch, build setlists, and turn pages hands-free.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#download" class="bg-brand-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-brand-700 transition">
@@ -60,10 +60,9 @@
                 Learn More
             </a>
         </div>
-        <!-- Hero screenshot placeholder -->
-        <div class="mt-16 rounded-2xl bg-gray-100 border border-gray-200 aspect-video flex items-center justify-center text-gray-400 text-sm max-w-4xl mx-auto">
-            <!-- Replace with: <img src="screenshots/hero.png" alt="Standly app showing sheet music" class="rounded-2xl"> -->
-            App screenshot goes here
+        <!-- Hero screenshot -->
+        <div class="mt-16 max-w-4xl mx-auto">
+            <img src="screenshots/home.png" alt="Standly home screen with recently viewed pieces, favorites, and set lists" class="rounded-2xl shadow-2xl ring-1 ring-gray-200 w-full">
         </div>
     </section>
 
@@ -72,7 +71,7 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center">Everything you need on stage</h2>
             <p class="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
-                Designed for musicians who perform with tablets. No cloud, no subscriptions, no distractions.
+                Designed for musicians who perform with any Windows device. No cloud, no subscriptions, no distractions.
             </p>
             <div class="mt-16 grid md:grid-cols-3 gap-10">
                 <div>
@@ -138,26 +137,34 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center">See it in action</h2>
             <p class="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
-                Built for tablets, optimized for performance on stage.
+                Built for Windows, optimized for performance on stage.
             </p>
             <div class="mt-16 grid md:grid-cols-2 gap-8">
-                <!-- Screenshot placeholders - replace with real images -->
-                <div class="rounded-xl bg-gray-100 border border-gray-200 aspect-video flex items-center justify-center text-gray-400 text-sm">
-                    <!-- <img src="screenshots/pdf-viewer.png" alt="PDF viewer with sheet music" class="rounded-xl"> -->
-                    PDF Viewer screenshot
-                </div>
-                <div class="rounded-xl bg-gray-100 border border-gray-200 aspect-video flex items-center justify-center text-gray-400 text-sm">
-                    <!-- <img src="screenshots/annotations.png" alt="Pen annotations on sheet music" class="rounded-xl"> -->
-                    Annotations screenshot
-                </div>
-                <div class="rounded-xl bg-gray-100 border border-gray-200 aspect-video flex items-center justify-center text-gray-400 text-sm">
-                    <!-- <img src="screenshots/setlist.png" alt="Setlist management" class="rounded-xl"> -->
-                    Setlist screenshot
-                </div>
-                <div class="rounded-xl bg-gray-100 border border-gray-200 aspect-video flex items-center justify-center text-gray-400 text-sm">
-                    <!-- <img src="screenshots/half-page.png" alt="Half-page navigation mode" class="rounded-xl"> -->
-                    Half-page navigation screenshot
-                </div>
+                <figure>
+                    <img src="screenshots/dual-page.png" alt="Two-page reading view showing a Bach Brandenburg Concerto trumpet part" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <figcaption class="mt-3 text-sm text-gray-500">Two-page reading view keeps a full spread in front of you.</figcaption>
+                </figure>
+                <figure>
+                    <img src="screenshots/library.png" alt="Library view listing PDF sheet music with page counts" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <figcaption class="mt-3 text-sm text-gray-500">Your whole library in one place, fully offline.</figcaption>
+                </figure>
+                <figure>
+                    <img src="screenshots/annotations.png" alt="Sheet music marked up with yellow highlighter annotations" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <figcaption class="mt-3 text-sm text-gray-500">Highlight and annotate directly on the page with pen or touch.</figcaption>
+                </figure>
+                <figure>
+                    <img src="screenshots/setlist.png" alt="Single-page view with a set list of pieces in the sidebar" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <figcaption class="mt-3 text-sm text-gray-500">Build set lists and move through your program in order.</figcaption>
+                </figure>
+            </div>
+
+            <!-- Page-turn demo video -->
+            <div class="mt-16 max-w-3xl mx-auto text-center">
+                <h3 class="text-2xl font-bold">Hands-free page turns</h3>
+                <p class="mt-3 text-gray-600">Tap a Bluetooth pedal and Standly slides to the next page without missing a beat.</p>
+                <video class="mt-8 rounded-xl shadow-lg ring-1 ring-gray-200 w-full" autoplay loop muted playsinline>
+                    <source src="screenshots/page-turns.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </section>
@@ -167,7 +174,7 @@
         <div class="max-w-3xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold">Ready to ditch the paper?</h2>
             <p class="mt-4 text-brand-100 text-lg">
-                Standly is available on the Microsoft Store for Windows 10 and 11 tablets.
+                Standly is available on the Microsoft Store for Windows 10 and 11 &mdash; on any PC, laptop, tablet, or 2-in-1.
             </p>
             <div class="mt-10">
                 <!-- Replace href with actual Microsoft Store link -->
@@ -176,7 +183,7 @@
                 </a>
             </div>
             <p class="mt-6 text-brand-200 text-sm">
-                Requires Windows 10 version 1809 or later. Touch and pen input recommended.
+                Requires Windows 10 version 1809 or later. Works with mouse, touch, and pen.
             </p>
         </div>
     </section>
