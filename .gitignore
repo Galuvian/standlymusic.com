@@ -2,7 +2,7 @@
 Thumbs.db
 *.swp
 
-# Local sample sheet-music library — not for publishing
+# Local sample sheet-music library — not for publishing (lives outside docs/)
 site/PDF Parts/
 
 # Agent memory / scratch
