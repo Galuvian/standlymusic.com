@@ -30,6 +30,110 @@
         }
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "I use forScore on iPad. Is there a Windows equivalent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, that's exactly why we built Standly. If you've moved to a Surface or another Windows tablet, you don't have to give up a polished music-stand experience. Standly is a native Windows app with PDF viewing, pen and touch annotations, setlists, and hands-free Bluetooth page turns, built for Windows from the ground up rather than ported from another platform."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Standly work on a Surface Pro or other Windows tablet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Standly runs on any Windows 10 or 11 device, including Surface Pro, Surface Go, and other tablets and 2-in-1s, as well as laptops and desktops. It works on Intel and AMD machines and on ARM-based Windows devices such as the Surface Pro X and Copilot+ PCs. It's designed for touch and pen first, with smooth high-DPI rendering, so it feels right with a tablet on your music stand."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is Standly different from other sheet music apps?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most music apps on Windows are ports or web wrappers with custom interfaces that fight the platform. Standly is built natively for Windows, so it uses familiar controls, real keyboard shortcuts, and proper pen and touch support, with nothing to relearn. It's also fully offline and a one-time purchase: no accounts, no cloud, no subscription."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Standly a subscription or a one-time purchase?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Standly is a one-time purchase, with no subscription. Buy it once and the full music stand is yours. Down the road we may add optional advanced features (such as automatic music recognition) as a separate offering, but the music stand itself stays a one-time purchase."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Standly need an account or an internet connection?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Standly works completely offline, with no account, no sign-in, and no cloud. Your sheet music and annotations stay on your device, and there's no telemetry tracking what you play. Once it's installed, you never need a connection to use it."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What file formats can Standly open?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Standly opens standard PDF sheet music today, the format most of your library is probably already in. Support for image files (scans and photos of music) is coming soon."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I mark up my music with a pen or touch, and do my annotations save?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Annotate directly on the page with ink, highlighters, and an eraser, using a pen, your finger, or a mouse. Your markings save automatically and stay with the music across sessions, so they're there every time you reopen the piece."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I bring my annotations and markup from another app into Standly?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. If you've already marked up your sheet music in another app, Standly can import your annotations, notes, and other markup, so switching doesn't mean starting over. We're actively expanding the list of apps and formats we support, and we'd love to hear what you use, so send us your requests."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which Bluetooth page turners or foot pedals does Standly support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Standly supports popular Bluetooth controllers including AirTurn and Flic, and is likely compatible with other Bluetooth page-turn devices as well. You can customize which button turns the page in each direction to match your device."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I organize pieces into setlists for a performance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Build setlists to put pieces in performance order, restrict them to specific page ranges, and move seamlessly from one document to the next, so your whole program flows without hunting for the next chart."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What do I need to run Standly?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Standly runs on Windows 10 (version 1809 or later) and Windows 11, on any PC, laptop, tablet, or 2-in-1, with both Intel or AMD and ARM-based processors supported. It works with mouse, touch, and pen, so a touchscreen is great for annotating but isn't required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I try Standly before buying?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Standly comes with a free 30-day trial, so you can use it on your own device with your real music and your own pedal before deciding. After the trial, it's a single one-time purchase."
+                }
+            }
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -66,6 +170,7 @@
             <div class="flex items-center gap-6 text-sm">
                 <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
                 <a href="#screenshots" class="text-gray-600 hover:text-gray-900">Screenshots</a>
+                <a href="#faq" class="text-gray-600 hover:text-gray-900">FAQ</a>
                 <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D" class="bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition">Download</a>
             </div>
         </div>
@@ -77,7 +182,7 @@
             Your sheet music,<br>always ready.
         </h1>
         <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            A digital music stand built for Windows &mdash; PCs, laptops, tablets, and 2-in-1s. It looks and feels like a real Windows app, so it's intuitive from the first launch. View PDFs, annotate with pen and touch, build setlists, and turn pages hands-free.
+            A digital music stand built for Windows, running on PCs, laptops, tablets, and 2-in-1s. It looks and feels like a real Windows app, so it's intuitive from the first launch. View PDFs, annotate with pen and touch, build setlists, and turn pages hands-free.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D" class="bg-brand-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-brand-700 transition">
@@ -99,7 +204,7 @@
             <p class="text-sm font-semibold uppercase tracking-wide text-brand-600">A real Windows app</p>
             <h2 class="mt-3 text-3xl md:text-4xl font-bold">Finally, sheet music software that just feels right.</h2>
             <p class="mt-6 text-lg text-gray-600">
-                Most music apps on Windows are ports or web wrappers bolted onto clunky, custom interfaces that fight the platform at every tap. Standly is built natively for Windows, so it behaves exactly the way you expect &mdash; familiar controls, smooth pen and touch, real keyboard shortcuts, and proper support for high-DPI displays. Nothing to relearn. It just works.
+                Most music apps on Windows are ports or web wrappers bolted onto clunky, custom interfaces that fight the platform at every tap. Standly is built natively for Windows, so it behaves exactly the way you expect, with familiar controls, smooth pen and touch, real keyboard shortcuts, and proper support for high-DPI displays. Nothing to relearn. It just works.
             </p>
         </div>
     </section>
@@ -207,12 +312,132 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="bg-gray-50 py-24">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center">Frequently asked questions</h2>
+            <p class="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
+                Everything you might want to know before you switch to Standly.
+            </p>
+            <div class="mt-12">
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>I use forScore on iPad. Is there a Windows equivalent?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Yes, that's exactly why we built Standly. If you've moved to a Surface or another Windows tablet, you don't have to give up a polished music-stand experience. Standly is a native Windows app with PDF viewing, pen and touch annotations, setlists, and hands-free Bluetooth page turns, built for Windows from the ground up rather than ported from another platform.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Does Standly work on a Surface Pro or other Windows tablet?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Yes. Standly runs on any Windows 10 or 11 device, including Surface Pro, Surface Go, and other tablets and 2-in-1s, as well as laptops and desktops. It works on Intel and AMD machines and on ARM-based Windows devices such as the Surface Pro X and Copilot+ PCs. It's designed for touch and pen first, with smooth high-DPI rendering, so it feels right with a tablet on your music stand.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>How is Standly different from other sheet music apps?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Most music apps on Windows are ports or web wrappers with custom interfaces that fight the platform. Standly is built natively for Windows, so it uses familiar controls, real keyboard shortcuts, and proper pen and touch support, with nothing to relearn. It's also fully offline and a one-time purchase: no accounts, no cloud, no subscription.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Is Standly a subscription or a one-time purchase?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Standly is a one-time purchase, with no subscription. Buy it once and the full music stand is yours. Down the road we may add optional advanced features (such as automatic music recognition) as a separate offering, but the music stand itself stays a one-time purchase.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Does Standly need an account or an internet connection?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        No. Standly works completely offline, with no account, no sign-in, and no cloud. Your sheet music and annotations stay on your device, and there's no telemetry tracking what you play. Once it's installed, you never need a connection to use it.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>What file formats can Standly open?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Standly opens standard PDF sheet music today, the format most of your library is probably already in. Support for image files (scans and photos of music) is coming soon.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Can I mark up my music with a pen or touch, and do my annotations save?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Yes. Annotate directly on the page with ink, highlighters, and an eraser, using a pen, your finger, or a mouse. Your markings save automatically and stay with the music across sessions, so they're there every time you reopen the piece.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Can I bring my annotations and markup from another app into Standly?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Yes. If you've already marked up your sheet music in another app, Standly can import your annotations, notes, and other markup, so switching doesn't mean starting over. We're actively expanding the list of apps and formats we support, and we'd love to hear what you use, so send us your requests.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Which Bluetooth page turners or foot pedals does Standly support?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Standly supports popular Bluetooth controllers including AirTurn and Flic, and is likely compatible with other Bluetooth page-turn devices as well. You can customize which button turns the page in each direction to match your device.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Can I organize pieces into setlists for a performance?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Yes. Build setlists to put pieces in performance order, restrict them to specific page ranges, and move seamlessly from one document to the next, so your whole program flows without hunting for the next chart.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>What do I need to run Standly?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Standly runs on Windows 10 (version 1809 or later) and Windows 11, on any PC, laptop, tablet, or 2-in-1, with both Intel or AMD and ARM-based processors supported. It works with mouse, touch, and pen, so a touchscreen is great for annotating but isn't required.
+                    </p>
+                </details>
+                <details class="group border-b border-gray-200 py-5">
+                    <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-semibold [&amp;::-webkit-details-marker]:hidden">
+                        <span>Can I try Standly before buying?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 shrink-0 ml-4 text-brand-600 transition-transform group-open:rotate-180"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Yes, Standly comes with a free 30-day trial, so you can use it on your own device with your real music and your own pedal before deciding. After the trial, it's a single one-time purchase.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- Download CTA -->
     <section id="download" class="bg-brand-900 text-white py-24">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold">Ready to ditch the paper?</h2>
             <p class="mt-4 text-brand-100 text-lg">
-                Standly is available on the Microsoft Store for Windows 10 and 11 &mdash; on any PC, laptop, tablet, or 2-in-1.
+                Standly is available on the Microsoft Store for Windows 10 and 11, on any PC, laptop, tablet, or 2-in-1.
             </p>
             <div class="mt-10">
                 <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D" class="inline-block bg-white text-brand-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-brand-50 transition">
