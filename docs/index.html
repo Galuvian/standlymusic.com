@@ -194,7 +194,7 @@
         </div>
         <!-- Hero screenshot -->
         <div class="mt-16 max-w-4xl mx-auto">
-            <img src="screenshots/home.png" alt="Standly home screen with recently viewed pieces, favorites, and set lists" class="rounded-2xl shadow-2xl ring-1 ring-gray-200 w-full">
+            <img src="screenshots/home.png" alt="Standly home screen with recently viewed pieces, favorites, and set lists" class="rounded-2xl shadow-2xl ring-1 ring-gray-200 w-full cursor-zoom-in" data-zoom>
         </div>
     </section>
 
@@ -284,19 +284,19 @@
             </p>
             <div class="mt-16 grid md:grid-cols-2 gap-8">
                 <figure>
-                    <img src="screenshots/dual-page.png" alt="Two-page reading view showing a Bach Brandenburg Concerto trumpet part" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <img src="screenshots/dual-page.png" alt="Two-page reading view showing a Bach Brandenburg Concerto trumpet part" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full cursor-zoom-in" data-zoom>
                     <figcaption class="mt-3 text-sm text-gray-500">Two-page reading view keeps a full spread in front of you.</figcaption>
                 </figure>
                 <figure>
-                    <img src="screenshots/library.png" alt="Library view listing PDF sheet music with page counts" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <img src="screenshots/library.png" alt="Library view listing PDF sheet music with page counts" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full cursor-zoom-in" data-zoom>
                     <figcaption class="mt-3 text-sm text-gray-500">Your whole library in one place, fully offline.</figcaption>
                 </figure>
                 <figure>
-                    <img src="screenshots/annotations.png" alt="Sheet music marked up with yellow highlighter annotations" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <img src="screenshots/annotations.png" alt="Sheet music marked up with yellow highlighter annotations" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full cursor-zoom-in" data-zoom>
                     <figcaption class="mt-3 text-sm text-gray-500">Highlight and annotate directly on the page with pen or touch.</figcaption>
                 </figure>
                 <figure>
-                    <img src="screenshots/setlist.png" alt="Single-page view with a set list of pieces in the sidebar" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full">
+                    <img src="screenshots/setlist.png" alt="Single-page view with a set list of pieces in the sidebar" class="rounded-xl shadow-lg ring-1 ring-gray-200 w-full cursor-zoom-in" data-zoom>
                     <figcaption class="mt-3 text-sm text-gray-500">Build set lists and move through your program in order.</figcaption>
                 </figure>
             </div>
@@ -461,6 +461,58 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4 cursor-zoom-out opacity-0 transition-opacity duration-200" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+        <button type="button" id="lightbox-close" class="absolute top-4 right-4 text-white/70 hover:text-white transition" aria-label="Close image preview">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="max-h-full max-w-full rounded-lg shadow-2xl">
+    </div>
+
+    <script>
+        (function () {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+
+            function openLightbox(img) {
+                lightboxImg.src = img.currentSrc || img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                // Trigger fade-in on next frame.
+                requestAnimationFrame(function () {
+                    lightbox.classList.remove('opacity-0');
+                });
+            }
+
+            function closeLightbox() {
+                lightbox.classList.add('opacity-0');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                setTimeout(function () {
+                    lightbox.classList.add('hidden');
+                    lightbox.classList.remove('flex');
+                    lightboxImg.src = '';
+                }, 200);
+            }
+
+            document.querySelectorAll('img[data-zoom]').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    openLightbox(img);
+                });
+            });
+
+            lightbox.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                    closeLightbox();
+                }
+            });
+        })();
+    </script>
 
 </body>
 </html>
