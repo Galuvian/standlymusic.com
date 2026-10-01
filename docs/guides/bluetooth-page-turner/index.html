@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Turning Pages on Windows: Bluetooth Buttons, Pedals, and Remotes | Standly</title>
+    <meta name="description" content="How to turn sheet music pages on a Windows tablet or laptop with a foot pedal, a smart button, or a $15 Bluetooth media remote, and how to fix one that won't turn pages.">
+    <link rel="canonical" href="https://standlymusic.com/guides/bluetooth-page-turner/">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { 50: '#f5f0fa', 100: '#e5d9f2', 600: '#592e8a', 700: '#4a2574', 900: '#2a1344' } } } } }
+    </script>
+    <link rel="stylesheet" href="/guides/guides.css">
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <div class="draft-banner">Draft. Not linked from the site and hidden from search engines until the text is final.</div>
+
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold tracking-tight">Standly</a>
+            <div class="flex items-center gap-6 text-sm">
+                <a href="/guides/" class="text-gray-600 hover:text-gray-900">Guides</a>
+                <a href="/#faq" class="text-gray-600 hover:text-gray-900">FAQ</a>
+                <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-pageturner-nav" class="bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        <p class="text-sm font-medium text-brand-600"><a href="/guides/">Guides</a></p>
+        <h1 class="mt-2 text-3xl md:text-5xl font-bold tracking-tight leading-tight">Turning pages on Windows: Bluetooth buttons, pedals, and remotes</h1>
+
+        <article class="prose mt-8">
+
+            <p>Tapping the screen to turn a page takes a hand off your instrument. A Bluetooth page turner fixes that. Dedicated foot pedals are the usual answer, but a media remote that costs less than a set of strings works too.</p>
+
+            <div class="todo">Intro in your own words: why you needed a page turner as a trombonist (both hands busy, long passages with no rests), and that you turn pages with a cheap steering-wheel media remote.</div>
+
+            <h2>Your options</h2>
+
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr><th>Type</th><th>Examples</th><th>Typical price</th><th>Good for</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Foot pedal</td><td>AirTurn and similar</td><td>$70 and up</td><td>Players whose hands are never free: pianists, guitarists, drummers</td></tr>
+                        <tr><td>Smart button</td><td>Flic</td><td>$35 and up</td><td>Sticking a single button to the stand or the instrument</td></tr>
+                        <tr><td>Media remote</td><td>Generic Bluetooth media buttons, often sold for car steering wheels</td><td>$10 to $20</td><td>Trying hands-free page turns without spending much</td></tr>
+                        <tr><td>Presentation clicker</td><td>Slide remotes for PowerPoint</td><td>$15 to $40</td><td>Players who already own one</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="todo">Check the prices before publishing. Only say a type works with Standly if it has been tested. The landing page says AirTurn and Flic are supported. Have presentation clickers been tested? If not, say "untested" or drop the row.</div>
+
+            <h2>The budget option: a Bluetooth media remote</h2>
+
+            <p>I turn pages with a small 5-button Bluetooth remote sold for car steering wheels. It has buttons for play and pause, next and previous track, and volume. It comes with a strap mount meant for a steering wheel.</p>
+
+            <p>Standly treats the next-track and previous-track buttons as page turns with no setup. The other buttons can be assigned to other actions.</p>
+
+            <div class="photo-slot">Photo: the remote itself, and where it lives while you play.</div>
+
+            <div class="todo">The details only you know:
+                <br>- Where you mount it while playing (the stand? the horn? the steering-wheel strap around something?) and which hand or finger presses it
+                <br>- Which buttons you use for what
+                <br>- Battery type and how long it lasts
+                <br>- Anything annoying: pairing drops, lag, a button that is easy to hit by accident
+                <br>Describe it generically ("a 5-button Bluetooth media remote, about $15") rather than naming the Amazon listing, which can disappear. An affiliate link is an option if you want one.</div>
+
+            <h2>Set it up</h2>
+
+            <ol>
+                <li>Put the remote or pedal in pairing mode. The manual explains how. Usually you hold a button until a light flashes.</li>
+                <li>In Windows, open <strong>Settings → Bluetooth &amp; devices</strong> and select <strong>Add device</strong>, then <strong>Bluetooth</strong>.</li>
+                <li>Select the device from the list.</li>
+                <li>Open a piece in Standly and press a button.</li>
+            </ol>
+
+            <p>Most pedals and remotes identify themselves to Windows as a keyboard or as media buttons. Standly responds to both with no setup:</p>
+            <ul>
+                <li><strong>Next-track and previous-track buttons</strong> turn a full page forward and back.</li>
+                <li><strong>Page Down, Page Up, and Space</strong> turn a full page.</li>
+                <li><strong>Right and Left arrow keys</strong> turn half a page.</li>
+            </ul>
+            <p>Play, pause, and volume buttons do nothing until you assign them, so a pedal cannot trigger something unexpected the first time it connects.</p>
+
+            <div class="todo">Add a screenshot of <strong>Settings → Input bindings</strong>. (The defaults above come from the app's source code.)</div>
+
+            <h3>Change what a button does</h3>
+
+            <p><strong>Settings → Input bindings</strong> assigns any key or button to a viewer action. Press the button you want to change and choose the action. Changes take effect immediately.</p>
+
+            <p>Some useful assignments:</p>
+            <ul>
+                <li><strong>Half-page turn</strong>, so the line you are reading stays on screen while the next line appears.</li>
+                <li><strong>Previous page</strong> on a second button, for repeats and D.S. jumps.</li>
+            </ul>
+
+            <div class="todo">Which assignments do you actually use on your 5 buttons? A real example beats a generic list.</div>
+
+            <h2>Troubleshooting</h2>
+
+            <h3>It's paired, but pages don't turn</h3>
+            <ul>
+                <li>Make sure a piece is open in Standly and the Standly window is in front. Buttons go to whichever app is active.</li>
+                <li>Find out what the button sends. Open <strong>Settings → Input bindings</strong>, start adding a binding, and press the button. If nothing appears, Windows is not receiving it.</li>
+                <li>Some pedals have modes that send different keys. Check the manual for a mode that sends arrow keys or Page Up and Page Down.</li>
+            </ul>
+
+            <h3>The volume changes when I turn a page</h3>
+
+            <div class="todo">This needs testing. If a volume button is bound to a page turn in Standly, does Windows also change the volume? I found no code in Standly that stops the button from reaching Windows, so it probably does. If so, recommend using the track buttons for page turns. Related question to test: if Spotify or another music player is running, does the next-track button also skip its song? This section is probably the most-searched part of the page.</div>
+
+            <h3>It stops working after a while</h3>
+            <ul>
+                <li>Many remotes go to sleep to save battery. Pressing a button usually wakes them, but the first press may be lost.</li>
+                <li>Replace or charge the battery. Low batteries cause dropped presses before the device stops completely.</li>
+                <li>If the connection drops often, remove the device in Windows Bluetooth settings and pair it again.</li>
+            </ul>
+
+            <div class="todo">Have you seen any of these with your remote? Keep only what's true, and add anything you've run into.</div>
+
+            <h2>Which should you get?</h2>
+
+            <div class="todo">Your recommendation in 3 or 4 sentences. For example: start with a cheap remote to find out whether hands-free page turns suit you, and buy a pedal if you never have a free finger. Say what you'd pick as a trombonist and why.</div>
+
+        </article>
+
+        <aside class="mt-16 rounded-2xl bg-brand-900 text-white p-8 text-center">
+            <p class="text-xl font-semibold">Try Standly free for 30 days</p>
+            <p class="mt-2 text-white/80">Pair your pedal or remote and test it with your own music before you decide.</p>
+            <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-pageturner" class="mt-6 inline-block bg-white text-brand-900 px-6 py-3 rounded-lg font-medium hover:bg-brand-50 transition">Get Standly from the Microsoft Store</a>
+        </aside>
+    </main>
+
+    <footer class="border-t border-gray-100 py-8">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
+            <p>&copy; 2026 Standly. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 sm:mt-0">
+                <a href="/guides/" class="hover:text-gray-700">Guides</a>
+                <a href="/privacy-policy.html" class="hover:text-gray-700">Privacy</a>
+                <a href="mailto:support@standlymusic.com" class="hover:text-gray-700">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cloudflare Web Analytics -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0dc551d056344bda8b52795f9b369077"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

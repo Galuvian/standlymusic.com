@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Sheet Music Screen Size Calculator | Standly</title>
+    <meta name="description" content="How big will sheet music look on your tablet or laptop? Enter a screen size and shape to see a page at its actual size compared with print, upright and two pages side by side.">
+    <link rel="canonical" href="https://standlymusic.com/guides/sheet-music-screen-size/">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { 50: '#f5f0fa', 100: '#e5d9f2', 600: '#592e8a', 700: '#4a2574', 900: '#2a1344' } } } } }
+    </script>
+    <link rel="stylesheet" href="/guides/guides.css">
+    <style>
+        .field label { display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.35rem; }
+        .field input, .field select { width: 100%; border: 1px solid #d1d5db; border-radius: 0.5rem; padding: 0.55rem 0.75rem; font-size: 1rem; background: #fff; }
+        .field input:focus, .field select:focus { outline: 2px solid #592e8a; outline-offset: 1px; border-color: transparent; }
+        .result-card svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <div class="draft-banner">Draft. Not linked from the site and hidden from search engines until the text is final.</div>
+
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold tracking-tight">Standly</a>
+            <div class="flex items-center gap-6 text-sm">
+                <a href="/guides/" class="text-gray-600 hover:text-gray-900">Guides</a>
+                <a href="/#faq" class="text-gray-600 hover:text-gray-900">FAQ</a>
+                <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-sizecalc-nav" class="bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <p class="text-sm font-medium text-brand-600"><a href="/guides/">Guides</a></p>
+        <h1 class="mt-2 text-3xl md:text-5xl font-bold tracking-tight leading-tight">How big will my sheet music look?</h1>
+
+        <div class="prose mt-6 max-w-3xl">
+            <p>Pick a device or enter a screen size and shape. The calculator shows how big a page of music appears compared with the printed page, held upright or turned sideways to show two pages.</p>
+            <p>The results are for Standly in <strong>Full screen</strong>, where the toolbar and the Windows taskbar are hidden and the music uses the whole screen. This is the largest the music can appear on a given device.</p>
+            <div class="todo">One or two sentences in your voice on why you made this. For example, that screen shape surprised you when comparing your Envy with your wife's Spectre.</div>
+        </div>
+
+        <!-- Calculator -->
+        <section class="mt-10 rounded-2xl border border-gray-200 p-6 md:p-8" aria-label="Screen size calculator">
+            <div class="grid gap-5 md:grid-cols-2">
+                <div class="field md:col-span-2">
+                    <label for="preset">Device</label>
+                    <select id="preset"></select>
+                </div>
+                <div class="field">
+                    <label for="diag">Screen size (diagonal, inches)</label>
+                    <input id="diag" type="number" min="5" max="40" step="0.1" inputmode="decimal">
+                </div>
+                <div class="field">
+                    <label for="ratio">Screen shape</label>
+                    <select id="ratio">
+                        <option value="4:3">4:3 (iPad)</option>
+                        <option value="3:2">3:2 (Surface, some laptops)</option>
+                        <option value="16:10">16:10</option>
+                        <option value="16:9">16:9 (most older laptops)</option>
+                        <option value="custom">Enter resolution…</option>
+                    </select>
+                </div>
+                <div class="field hidden" id="custom-fields">
+                    <label for="resw">Resolution</label>
+                    <div class="flex items-center gap-2">
+                        <input id="resw" type="number" min="100" step="1" placeholder="2880" aria-label="Width in pixels">
+                        <span class="text-gray-500">×</span>
+                        <input id="resh" type="number" min="100" step="1" placeholder="1800" aria-label="Height in pixels">
+                    </div>
+                    <p class="mt-1 text-xs text-gray-500">Settings → System → Display → Display resolution</p>
+                </div>
+                <div class="field">
+                    <label for="paper">Printed page</label>
+                    <select id="paper">
+                        <option value="letter">US Letter (8.5 × 11 in)</option>
+                        <option value="a4">A4 (210 × 297 mm)</option>
+                        <option value="9x12">9 × 12 in (many band and orchestra parts)</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="margin">Trim page margins with framing</label>
+                    <select id="margin">
+                        <option value="0">No trimming</option>
+                        <option value="0.25">Trim 1/4 inch on each side</option>
+                        <option value="0.5">Trim 1/2 inch on each side</option>
+                        <option value="0.75">Trim 3/4 inch on each side</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mt-8 grid gap-6 md:grid-cols-2" aria-live="polite">
+                <div class="result-card rounded-xl bg-gray-50 p-5">
+                    <p class="text-sm font-medium text-gray-600">Upright, one page</p>
+                    <p class="mt-1"><span id="pct-portrait" class="text-4xl font-bold">–</span> <span class="text-gray-600">of printed size</span></p>
+                    <div id="svg-portrait" class="mt-4"></div>
+                </div>
+                <div class="result-card rounded-xl bg-gray-50 p-5">
+                    <p class="text-sm font-medium text-gray-600">Sideways, two pages</p>
+                    <p class="mt-1"><span id="pct-landscape" class="text-4xl font-bold">–</span> <span class="text-gray-600">of printed size, each page</span></p>
+                    <div id="svg-landscape" class="mt-4"></div>
+                </div>
+            </div>
+            <p id="screen-dims" class="mt-4 text-sm text-gray-500"></p>
+            <p class="mt-1 text-sm text-gray-500">Results assume Standly is in <strong>Full screen</strong>, with no toolbar or taskbar showing. Drawings are to scale with each other. The dashed outline is the printed page.</p>
+        </section>
+
+        <article class="prose mt-12 max-w-3xl">
+
+            <h2>How to read the numbers</h2>
+
+            <p>100% means the notes are the same size as on the printed page. Anything above about 85% reads much like paper for most people. Below about 65%, dense passages and small markings get hard to read from a stand.</p>
+
+            <div class="todo">Check those thresholds against your own experience before publishing, and adjust them. They're a starting point, not research.</div>
+
+            <h2>Why screen shape matters</h2>
+
+            <p>A letter-size page is about 1.3 times as tall as it is wide. A 4:3 screen held upright is almost exactly that shape, which is why iPads suit sheet music. A wide 16:9 screen held upright is much taller than the page, so the page is scaled to fit the width and the extra height goes unused.</p>
+
+            <p>Turned sideways, the situation reverses. Two pages side by side make a shape that is wider than it is tall, which suits 16:10 and 16:9 screens.</p>
+
+            <h2>Trimming margins</h2>
+
+            <p>Most printed music has half an inch or more of blank margin on every side. Scans often have more. Standly's framing feature crops that margin away, so the notes fill more of the screen. Use the <strong>Trim page margins</strong> option above to see the difference.</p>
+
+            <h2>What the calculator assumes</h2>
+            <ul>
+                <li>Standly is in <strong>Full screen</strong>, so no toolbar, side pane, or Windows taskbar takes up space. Outside full screen, the toolbar and taskbar reduce the height available, and the music appears smaller than shown here.</li>
+                <li>The screen size is the diagonal of the visible screen, as manufacturers list it.</li>
+                <li>Corners, notches, and rounded edges are ignored.</li>
+            </ul>
+
+            <p>For help picking a device, see <a href="/guides/choosing-a-windows-device-for-sheet-music/">choosing a Windows device for sheet music</a>.</p>
+        </article>
+
+        <aside class="mt-16 rounded-2xl bg-brand-900 text-white p-8 text-center">
+            <p class="text-xl font-semibold">Try Standly free for 30 days</p>
+            <p class="mt-2 text-white/80">See how your own music looks on your own screen.</p>
+            <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-sizecalc" class="mt-6 inline-block bg-white text-brand-900 px-6 py-3 rounded-lg font-medium hover:bg-brand-50 transition">Get Standly from the Microsoft Store</a>
+        </aside>
+    </main>
+
+    <footer class="border-t border-gray-100 py-8">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
+            <p>&copy; 2026 Standly. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 sm:mt-0">
+                <a href="/guides/" class="hover:text-gray-700">Guides</a>
+                <a href="/privacy-policy.html" class="hover:text-gray-700">Privacy</a>
+                <a href="mailto:support@standlymusic.com" class="hover:text-gray-700">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var PRESETS = [
+                { name: 'HP Envy x360 13 (13.3", 16:10)', diag: 13.3, ratio: '16:10' },
+                { name: 'HP Spectre x360 15 (15.6", 16:9)', diag: 15.6, ratio: '16:9' },
+                { name: 'Surface Pro, 13-inch (3:2)', diag: 13, ratio: '3:2' },
+                { name: 'Surface Pro, 12-inch (3:2)', diag: 12, ratio: '3:2' },
+                { name: 'Surface Go, older model (10.5", 3:2)', diag: 10.5, ratio: '3:2' },
+                { name: 'Typical 14" laptop (16:10)', diag: 14, ratio: '16:10' },
+                { name: 'Typical 15.6" laptop (16:9)', diag: 15.6, ratio: '16:9' },
+                { name: 'iPad Pro 13" (4:3), for comparison', diag: 13, ratio: '4:3' },
+                { name: 'iPad 11" (about 4:3), for comparison', diag: 11, ratio: '4:3' },
+                { name: 'Other: enter your own', diag: null, ratio: null }
+            ];
+            var PAPERS = { letter: [8.5, 11], a4: [8.27, 11.69], '9x12': [9, 12] };
+
+            var $ = function (id) { return document.getElementById(id); };
+            var preset = $('preset'), diag = $('diag'), ratio = $('ratio'), resw = $('resw'), resh = $('resh'),
+                paper = $('paper'), margin = $('margin'), customFields = $('custom-fields');
+
+            PRESETS.forEach(function (p, i) {
+                var o = document.createElement('option');
+                o.value = i; o.textContent = p.name;
+                preset.appendChild(o);
+            });
+
+            function applyPreset() {
+                var p = PRESETS[+preset.value];
+                if (p.diag !== null) { diag.value = p.diag; ratio.value = p.ratio; }
+                update();
+            }
+
+            function markCustom() {
+                preset.value = PRESETS.length - 1;
+                update();
+            }
+
+            function aspect() {
+                if (ratio.value === 'custom') {
+                    var w = +resw.value, h = +resh.value;
+                    if (w > 0 && h > 0) return Math.max(w, h) / Math.min(w, h);
+                    return null;
+                }
+                var parts = ratio.value.split(':');
+                return +parts[0] / +parts[1];
+            }
+
+            // Largest scale at which content of size (cw, ch) fits in a box of size (bw, bh).
+            function fit(bw, bh, cw, ch) { return Math.min(bw / cw, bh / ch); }
+
+            function pct(scale) { return Math.round(scale * 100) + '%'; }
+
+            // Draws a screen with n pages fitted inside it. Coordinates in inches, scaled by pxPerIn.
+            function drawScreen(sw, sh, pages, pw, ph, trim, scale, pxPerIn) {
+                var pad = 4;
+                var W = sw * pxPerIn + pad * 2, H = sh * pxPerIn + pad * 2;
+                var shownW = (pw - 2 * trim) * scale, shownH = (ph - 2 * trim) * scale;
+                var groupW = shownW * pages;
+                var x0 = pad + (sw - groupW) / 2 * pxPerIn, y0 = pad + (sh - shownH) / 2 * pxPerIn;
+                var svg = '<svg viewBox="0 0 ' + W.toFixed(1) + ' ' + H.toFixed(1) + '" role="img" aria-label="Screen drawing">';
+                svg += '<rect x="' + pad + '" y="' + pad + '" width="' + (sw * pxPerIn).toFixed(1) + '" height="' + (sh * pxPerIn).toFixed(1) + '" rx="6" fill="#1f2937"/>';
+                for (var i = 0; i < pages; i++) {
+                    var px = x0 + i * shownW * pxPerIn;
+                    svg += '<rect x="' + px.toFixed(1) + '" y="' + y0.toFixed(1) + '" width="' + (shownW * pxPerIn).toFixed(1) + '" height="' + (shownH * pxPerIn).toFixed(1) + '" fill="#fff"/>';
+                    // Staff lines suggest music without pretending to be a real score.
+                    var lines = Math.floor(shownH * pxPerIn / 18);
+                    for (var l = 1; l < lines; l++) {
+                        var ly = y0 + l * (shownH * pxPerIn) / lines;
+                        svg += '<line x1="' + (px + 6).toFixed(1) + '" x2="' + (px + shownW * pxPerIn - 6).toFixed(1) + '" y1="' + ly.toFixed(1) + '" y2="' + ly.toFixed(1) + '" stroke="#9ca3af" stroke-width="1"/>';
+                    }
+                }
+                // Printed page outline, centered on the first page, for comparison.
+                var cx = x0 + shownW * pxPerIn / 2, cy = y0 + shownH * pxPerIn / 2;
+                var ow = (pw - 2 * trim) * pxPerIn, oh = (ph - 2 * trim) * pxPerIn;
+                var gx = cx - ow / 2, gy = cy - oh / 2;
+                svg += '<rect x="' + gx.toFixed(1) + '" y="' + gy.toFixed(1) + '" width="' + ow.toFixed(1) + '" height="' + oh.toFixed(1) + '" fill="none" stroke="#592e8a" stroke-width="2" stroke-dasharray="6 4"/>';
+                svg += '</svg>';
+                // The printed outline can be larger than the screen, so grow the viewBox to include it.
+                var minX = Math.min(0, gx - 2), minY = Math.min(0, gy - 2);
+                var maxX = Math.max(W, gx + ow + 2), maxY = Math.max(H, gy + oh + 2);
+                // Explicit width and height keep both drawings at the same pixels per inch.
+                var vw = (maxX - minX).toFixed(1), vh = (maxY - minY).toFixed(1);
+                return svg.replace(/viewBox="[^"]*"/, 'viewBox="' + minX.toFixed(1) + ' ' + minY.toFixed(1) + ' ' + vw + ' ' + vh + '" width="' + vw + '" height="' + vh + '"');
+            }
+
+            function update() {
+                customFields.classList.toggle('hidden', ratio.value !== 'custom');
+                var d = +diag.value, r = aspect();
+                if (!(d > 0) || !r) {
+                    $('pct-portrait').textContent = '–';
+                    $('pct-landscape').textContent = '–';
+                    $('svg-portrait').innerHTML = $('svg-landscape').innerHTML = '';
+                    $('screen-dims').textContent = '';
+                    return;
+                }
+                var shortSide = d / Math.sqrt(1 + r * r), longSide = shortSide * r;
+                var pp = PAPERS[paper.value], trim = +margin.value;
+                var cw = pp[0] - 2 * trim, ch = pp[1] - 2 * trim;
+
+                var portrait = fit(shortSide, longSide, cw, ch);
+                var landscape = fit(longSide, shortSide, cw * 2, ch);
+                $('pct-portrait').textContent = pct(portrait);
+                $('pct-landscape').textContent = pct(landscape);
+
+                // Shared scale so both drawings compare directly.
+                var pxPerIn = 330 / Math.max(longSide, ch);
+                $('svg-portrait').innerHTML = drawScreen(shortSide, longSide, 1, pp[0], pp[1], trim, portrait, pxPerIn);
+                $('svg-landscape').innerHTML = drawScreen(longSide, shortSide, 2, pp[0], pp[1], trim, landscape, pxPerIn);
+                $('screen-dims').textContent = 'Visible screen: ' + longSide.toFixed(1) + ' × ' + shortSide.toFixed(1) + ' inches.';
+            }
+
+            preset.addEventListener('change', applyPreset);
+            [diag, ratio, resw, resh].forEach(function (el) { el.addEventListener('input', markCustom); });
+            [paper, margin].forEach(function (el) { el.addEventListener('input', update); });
+
+            applyPreset();
+        })();
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0dc551d056344bda8b52795f9b369077"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+</body>
+</html>
