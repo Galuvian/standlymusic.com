@@ -19,6 +19,21 @@ html { scroll-behavior: smooth; }
 .prose figure { margin-top: 1.5rem; }
 .prose figcaption { font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; }
 .table-scroll { overflow-x: auto; }
+.prose h2, .prose h3 { scroll-margin-top: 6rem; }
+.prose figure.portrait { max-width: 30rem; margin-left: auto; margin-right: auto; }
+
+/* Article layout: prose column plus a sticky sidebar on wide screens. */
+.guide-layout { display: grid; gap: 3rem; }
+.guide-sidebar { display: none; }
+@media (min-width: 1024px) {
+    .guide-layout { grid-template-columns: minmax(0, 46rem) 15rem; justify-content: space-between; }
+    .guide-sidebar { display: block; position: sticky; top: 6rem; align-self: start; }
+}
+.toc-title { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #6b7280; }
+.toc-list { margin-top: 0.75rem; border-left: 1px solid #e5e7eb; font-size: 0.875rem; line-height: 1.4; }
+.toc-list a { display: block; padding: 0.35rem 0 0.35rem 0.875rem; margin-left: -1px; border-left: 2px solid transparent; color: #4b5563; }
+.toc-list a:hover { color: #111827; }
+.toc-list a.active { color: #592e8a; border-left-color: #592e8a; font-weight: 500; }
 
 /* Drafting aids. Delete these blocks as the real text replaces them. */
 .draft-banner { background: #fef3c7; color: #78350f; font-size: 0.875rem; text-align: center; padding: 0.5rem 1rem; }
