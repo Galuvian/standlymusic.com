@@ -22,7 +22,7 @@
 <body class="bg-white text-gray-900 antialiased">
 
     <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/" class="text-xl font-bold tracking-tight">Standly</a>
             <div class="flex items-center gap-6 text-sm">
                 <a href="/guides/" class="text-gray-600 hover:text-gray-900">Guides</a>
@@ -32,9 +32,9 @@
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-6 py-16">
+    <main class="max-w-6xl mx-auto px-6 py-16">
         <p class="text-sm font-medium text-brand-600"><a href="/guides/">Guides</a></p>
-        <h1 class="mt-2 text-3xl md:text-5xl font-bold tracking-tight leading-tight">How big will my sheet music look?</h1>
+        <h1 class="mt-2 max-w-4xl text-3xl md:text-5xl font-bold tracking-tight leading-tight">How big will my sheet music look?</h1>
 
         <div class="prose mt-6 max-w-3xl">
             <p>Pick a device or enter a screen size and shape. The calculator shows how big a page of music appears compared with the printed page, held upright or turned sideways to show two pages.</p>
@@ -44,8 +44,8 @@
 
         <!-- Calculator -->
         <section class="mt-10 rounded-2xl border border-gray-200 p-6 md:p-8" aria-label="Screen size calculator">
-            <div class="grid gap-5 md:grid-cols-2">
-                <div class="field md:col-span-2">
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+                <div class="field md:col-span-2 lg:col-span-4">
                     <label for="preset">Device</label>
                     <select id="preset"></select>
                 </div>
@@ -141,7 +141,7 @@
     </main>
 
     <footer class="border-t border-gray-100 py-8">
-        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
             <p>&copy; 2026 Standly. All rights reserved.</p>
             <div class="flex gap-6 mt-4 sm:mt-0">
                 <a href="/guides/" class="hover:text-gray-700">Guides</a>

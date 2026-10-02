@@ -16,7 +16,7 @@
 <body class="bg-white text-gray-900 antialiased">
 
     <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/" class="text-xl font-bold tracking-tight">Standly</a>
             <div class="flex items-center gap-6 text-sm">
                 <a href="/guides/" class="text-gray-600 hover:text-gray-900">Guides</a>
@@ -26,19 +26,21 @@
         </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-6 py-16">
+    <main class="max-w-6xl mx-auto px-6 py-16">
         <p class="text-sm font-medium text-brand-600"><a href="/guides/">Guides</a></p>
-        <h1 class="mt-2 text-3xl md:text-5xl font-bold tracking-tight leading-tight">Choosing a Windows device</h1>
+        <h1 class="mt-2 max-w-4xl text-3xl md:text-5xl font-bold tracking-tight leading-tight">Choosing a Windows device</h1>
 
-        <article class="prose mt-8">
+        <div class="guide-layout mt-8">
+        <div class="min-w-0">
+        <article class="prose">
 
             <p>Most advice online about reading music from a screen assumes an iPad. Windows has more choice, from $300 secondhand tablets to 16-inch convertibles. For reading music on a stand, a few things matter much more than the processor or the price tag. This guide covers those, then lists current models by what you care about most.</p>
 
             <p>Choosing the right device is important, and I learned that the hard way. I play in a variety of groups: orchestras on bright stages or in the dark, and bands that play on the common on sunny days. Reading music in all of those places, without worrying every time I put the device on my music stand, takes the right device. If I'd bought an iPad for reading music, that's the only thing I would have done with it. I wanted a device I could use every day for many things, and a Windows 2-in-1 was the best fit. Then I went looking for software to read music on, and it was all bad. So I created Standly, the software I wanted to use.</p>
 
-            <figure>
+            <figure class="portrait">
                 <img src="/guides/images/envy-on-stand-outdoor-gig.jpg" width="1200" height="1600" alt="An HP Envy x360 showing a bass trombone part, on a music stand at an outdoor concert, with a trombone in the foreground and the audience on the grass beyond." class="rounded-xl w-full h-auto">
-                <figcaption>My Envy on the stand at an outdoor gig on the common.</figcaption>
+                <figcaption>My Envy on the stand at an outdoor gig at the Hatch Shell on the Boston Esplanade.</figcaption>
             </figure>
 
             <p class="text-sm text-gray-500">Models and prices checked in October 2026.</p>
@@ -263,10 +265,20 @@
             <p class="mt-2 text-white/80">See how your music looks on the device you already own before buying a new one.</p>
             <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-choosing" class="mt-6 inline-block bg-white text-brand-900 px-6 py-3 rounded-lg font-medium hover:bg-brand-50 transition">Get Standly from the Microsoft Store</a>
         </aside>
+        </div>
+
+        <aside class="guide-sidebar">
+            <nav data-toc aria-label="On this page"></nav>
+            <div class="mt-8 rounded-xl bg-brand-50 p-5">
+                <p class="font-semibold text-brand-900">Try Standly free for 30 days</p>
+                <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-choosing-sidebar" class="mt-3 block text-center bg-brand-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-brand-700 transition">Microsoft Store</a>
+            </div>
+        </aside>
+        </div>
     </main>
 
     <footer class="border-t border-gray-100 py-8">
-        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
             <p>&copy; 2026 Standly. All rights reserved.</p>
             <div class="flex gap-6 mt-4 sm:mt-0">
                 <a href="/guides/" class="hover:text-gray-700">Guides</a>
@@ -275,6 +287,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="/guides/toc.js" defer></script>
 
     <!-- Cloudflare Web Analytics -->
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0dc551d056344bda8b52795f9b369077"}'></script>

@@ -16,7 +16,7 @@
 <body class="bg-white text-gray-900 antialiased">
 
     <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/" class="text-xl font-bold tracking-tight">Standly</a>
             <div class="flex items-center gap-6 text-sm">
                 <a href="/guides/" class="text-gray-600 hover:text-gray-900">Guides</a>
@@ -26,11 +26,13 @@
         </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-6 py-16">
+    <main class="max-w-6xl mx-auto px-6 py-16">
         <p class="text-sm font-medium text-brand-600"><a href="/guides/">Guides</a></p>
-        <h1 class="mt-2 text-3xl md:text-5xl font-bold tracking-tight leading-tight">Turning pages on Windows: Bluetooth buttons, pedals, and remotes</h1>
+        <h1 class="mt-2 max-w-4xl text-3xl md:text-5xl font-bold tracking-tight leading-tight">Turning pages on Windows: Bluetooth buttons, pedals, and remotes</h1>
 
-        <article class="prose mt-8">
+        <div class="guide-layout mt-8">
+        <div class="min-w-0">
+        <article class="prose">
 
             <p>Tapping the screen to turn a page means taking a hand off your instrument. How much that matters depends on what you play. Some players can spare a hand for a moment and may not need a page turner at all. Many instruments need both hands all the time. For those players, a way to turn the page without letting go of the instrument is important.</p>
 
@@ -165,10 +167,20 @@
             <p class="mt-2 text-white/80">Pair your pedal or remote and test it with your own music before you decide.</p>
             <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-pageturner" class="mt-6 inline-block bg-white text-brand-900 px-6 py-3 rounded-lg font-medium hover:bg-brand-50 transition">Get Standly from the Microsoft Store</a>
         </aside>
+        </div>
+
+        <aside class="guide-sidebar">
+            <nav data-toc aria-label="On this page"></nav>
+            <div class="mt-8 rounded-xl bg-brand-50 p-5">
+                <p class="font-semibold text-brand-900">Try Standly free for 30 days</p>
+                <a href="https://apps.microsoft.com/detail/9NQJ7P5FTQ6D?cid=guide-pageturner-sidebar" class="mt-3 block text-center bg-brand-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-brand-700 transition">Microsoft Store</a>
+            </div>
+        </aside>
+        </div>
     </main>
 
     <footer class="border-t border-gray-100 py-8">
-        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
             <p>&copy; 2026 Standly. All rights reserved.</p>
             <div class="flex gap-6 mt-4 sm:mt-0">
                 <a href="/guides/" class="hover:text-gray-700">Guides</a>
@@ -177,6 +189,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="/guides/toc.js" defer></script>
 
     <!-- Cloudflare Web Analytics -->
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0dc551d056344bda8b52795f9b369077"}'></script>
