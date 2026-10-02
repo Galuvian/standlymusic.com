@@ -1,0 +1,27 @@
+/* Shared styles for the guides. Tailwind handles layout; this covers long-form text. */
+
+html { scroll-behavior: smooth; }
+
+.prose { font-size: 1.0625rem; line-height: 1.75; color: #1f2937; }
+.prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 3.5rem; margin-bottom: 0.75rem; color: #111827; }
+.prose h3 { font-size: 1.15rem; font-weight: 600; margin-top: 2.25rem; margin-bottom: 0.5rem; color: #111827; }
+.prose p { margin-top: 1.25rem; }
+.prose ul, .prose ol { margin-top: 1.25rem; padding-left: 1.5rem; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li { margin-top: 0.75rem; }
+.prose a { color: #592e8a; text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { color: #3b1c5e; }
+.prose strong { font-weight: 600; color: #111827; }
+.prose table { width: 100%; margin-top: 1.25rem; border-collapse: collapse; font-size: 0.95rem; }
+.prose th, .prose td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+.prose th { font-weight: 600; background: #f9fafb; }
+.prose figure { margin-top: 1.5rem; }
+.prose figcaption { font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; }
+.table-scroll { overflow-x: auto; }
+
+/* Drafting aids. Delete these blocks as the real text replaces them. */
+.draft-banner { background: #fef3c7; color: #78350f; font-size: 0.875rem; text-align: center; padding: 0.5rem 1rem; }
+.todo { margin-top: 1.25rem; padding: 0.75rem 1rem; border-left: 4px solid #f59e0b; background: #fffbeb; color: #78350f; font-size: 0.95rem; line-height: 1.6; border-radius: 0 0.5rem 0.5rem 0; }
+.todo::before { content: "TODO (John): "; font-weight: 700; }
+.photo-slot { margin-top: 1.5rem; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; border: 2px dashed #d1d5db; border-radius: 0.75rem; color: #6b7280; font-size: 0.95rem; background: #f9fafb; }
